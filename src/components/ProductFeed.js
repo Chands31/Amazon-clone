@@ -3,13 +3,21 @@
 -> Server buiilds the page i.e renders it
 -> Server then sends it to client's browser 
 */}
-
+import Product from "./Product";
 function ProductFeed({products}) {
 
   return (
-    <div>   
-        {products.map(product =>(
-            <p>{product.title}</p>
+    <div className='grid grid-flow-row-dense md:grid-col-2 lg:grid-col-3 xl:grid-col-4'>   
+        {products.map(({id,title,price,description,category,image}) =>(
+         <Product 
+         key={id}
+         id={id}
+         title={title}
+         price={price}
+         description={description}
+         category={category}
+         image={image}
+         /> 
         ) )}
     </div>
   )
