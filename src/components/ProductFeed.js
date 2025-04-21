@@ -7,7 +7,7 @@ import Product from "./Product";
 function ProductFeed({products}) {
 
   return (
-    <div className='grid grid-flow-row-dense md:grid-col-2 lg:grid-col-3 xl:grid-col-4'>   
+    <div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">'>   
         {products.map(({id,title,price,description,category,image}) =>(
          <Product 
          key={id}
